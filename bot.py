@@ -22,12 +22,7 @@ def fetchShayri():
         line = random.choice(lines.split("\n\n"))
     heartEmoji = "\U00002764"
     kissEmoji = "\U0001F48B"
-    send(f"Dikkkuu{heartEmoji}")
-    send(f"Good Morning{kissEmoji}")
-    send(f"I love you so much{heartEmoji}")
-    send(f"{heartEmoji}{line}{heartEmoji}")
-    send(heartEmoji)
-    send(kissEmoji)
+    send(f"{heartEmoji}{kissEmoji}{line}{kissEmoji}{heartEmoji}")
 
 
 schedule.every().day.at("7:00").do(fetchShayri)
