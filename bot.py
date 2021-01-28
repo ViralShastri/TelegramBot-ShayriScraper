@@ -2,13 +2,13 @@ import time
 import schedule
 import requests
 import random
+import os
 
 
 def send(bot_message):
 
-    bot_token = '1515603394:AAHsfio0thgzKcmLGKqSh7uZuWrUP_5u-rI'
-    # bot_chatID = '739035170'
-    bot_chatID = '841442500'
+    bot_token = os.environ["bot_token"]
+    bot_chatID = os.environ["bot_chatID"]
     send_text = 'https://api.telegram.org/bot' + bot_token + \
         '/sendMessage?chat_id=' + bot_chatID + '&parse_mode=Markdown&text=' + bot_message
     response = requests.get(send_text)
